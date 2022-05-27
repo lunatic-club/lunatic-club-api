@@ -4,7 +4,7 @@ import terra from '@terra-money/terra.js'
 let lcd = null
 
 export const createLcd = async () => {
-  const gasPrices = await fetch('https://bombay-fcd.terra.dev/v1/txs/gas_prices')
+  const gasPrices = await fetch('https://columbus-fcd.terra.dev/v1/txs/gas_prices')
   const gasPricesJson = await gasPrices.json()
   const gasPricesCoins = new terra.Coins(gasPricesJson) 
   
